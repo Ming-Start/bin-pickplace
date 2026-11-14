@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "bin-pick-place-workspace"
 version = "0.1.0"
-description = "Standalone Isaac Lab pick-and-place technical exercise"
+description = "独立的 Isaac Lab 箱体抓取放置技术作业"
 requires-python = ">=3.11"
 
 [tool.ruff]

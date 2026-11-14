@@ -1,25 +1,25 @@
-# Python and packaging output
+# Python 与打包输出
 __pycache__/
 *.py[cod]
 *.egg-info/
 build/
 dist/
 
-# Local editor and simulator output
+# 本地编辑器与仿真器输出
 .pytest_cache/
 .ruff_cache/
 *.log
 
-# Raw downloaded assets are retained locally but are not part of the portable submission.
+# 原始下载资产仅保留在本地，不进入可移植提交副本。
 google_drive_assets/
 
-# Large presentation decks are kept locally under docs/ but not committed.
+# 大体积汇报 PPT 保存在 docs/ 下但不入库。
 docs/*.pptx
 
-# Layout editor candidate; formal reset poses live in the package configuration/events.
+# 布局编辑器候选文件；正式重置位姿在包配置与事件中定义。
 datasets/manual_layout.json
 
-# Historical validation snapshots; keep only the final hybrid-collision evidence.
+# 历史验证截图；仅保留最终混合碰撞证据。
 datasets/validation/cameras_final_scaled/
 datasets/validation/ccd_contact_final/
 datasets/validation/grasp_access_layout/

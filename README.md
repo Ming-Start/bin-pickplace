@@ -1,30 +1,30 @@
-# Bin Pick-and-Place for Isaac Lab
+# Isaac Lab 箱体抓取放置（Bin Pick-and-Place）环境
 
-This repository is a standalone, installable Isaac Lab manager-based environment for language-conditioned Franka Panda keyboard teleoperation. The operator must pick the instructed tool from a white source bin and release it inside a blue target bin. Two external RGB cameras and one wrist RGB camera observe the episode synchronously.
+本仓库是一个独立、可安装的 Isaac Lab manager-based 环境，用于语言条件控制的 Franka Panda 键盘遥操作。操作者需要按照指令从白色源箱中拿起指定工具，并将其释放在蓝色目标箱内。两台外部 RGB 相机与一台腕部 RGB 相机同步观测整个过程。
 
-## Completion Status
+## 完成状态
 
-The environment, portable assets, 7D relative differential-IK action, dictionary observations, reset logic, target-aware task metric, camera pipeline, teleoperation/record/replay wrappers, validation tools, human demonstrations, and final videos are complete.
+环境、可移植资产、7 维相对差分 IK 动作、字典观测、重置逻辑、目标感知任务指标、相机流水线、遥操作/录制/回放封装、验证工具、人工演示与最终视频均已完成。
 
-| Episode | Target | Actions / video frames | Duration |
+| Episode | 目标工具 | 动作数 / 视频帧数 | 时长 |
 | --- | --- | ---: | ---: |
-| `demo_0` | screwdriver | 2129 | 70.97 s |
-| `demo_1` | wrench | 3521 | 117.37 s |
-| `demo_2` | hammer | 2173 | 72.43 s |
-| `demo_3` | pallet knife | 2122 | 70.73 s |
+| `demo_0` | 螺丝刀（screwdriver） | 2129 | 70.97 s |
+| `demo_1` | 扳手（wrench） | 3521 | 117.37 s |
+| `demo_2` | 锤子（hammer） | 2173 | 72.43 s |
+| `demo_3` | 油漆刮刀（pallet knife） | 2122 | 70.73 s |
 
-All final videos are H.264/yuv420p, 1280x1024, and 30 fps. Their frame counts exactly match the corresponding HDF5 action counts. Each action replay reached the environment's metric-detected success condition.
+全部最终视频均为 H.264/yuv420p、1280x1024、30 fps，帧数与对应 HDF5 动作数完全一致。每条动作重放均到达了环境指标检测的成功条件。
 
-## Requirements
+## 环境要求
 
 - Isaac Sim 5.1
-- A compatible unmodified Isaac Lab checkout (validated with Isaac Lab 0.54.3)
-- Python 3.11 in the activated Isaac Lab environment
-- A CUDA-capable GPU for cameras, teleoperation, and video export
+- 一份兼容且未修改的 Isaac Lab 检出（已在 Isaac Lab 0.54.3 上验证）
+- 激活 Isaac Lab 环境中的 Python 3.11
+- 支持 CUDA 的 GPU（用于相机、遥操作与视频导出）
 
-## Installation
+## 安装
 
-From the repository root:
+在仓库根目录执行：
 
 ```bash
 python -m pip install --no-build-isolation -e source/bin_pickplace_tasks
@@ -32,29 +32,29 @@ python scripts/validate_install.py
 python scripts/list_envs.py
 ```
 
-Registered environment IDs:
+注册的环境 ID：
 
-- `Bin-PickPlace-Franka-v0`: multi-environment configuration with random target sampling.
-- `Bin-PickPlace-Franka-Play-v0`: deterministic one-environment evaluation configuration.
+- `Bin-PickPlace-Franka-v0`：多环境配置，随机采样目标。
+- `Bin-PickPlace-Franka-Play-v0`：确定性的单环境评估配置。
 
-## Environment Contract
+## 环境契约
 
-- Scene: Franka Panda, stock Seattle Lab table, white source bin, blue target bin, and four supplied tools.
-- Instruction: `Pick the <tool_name> from the white bin and place it in the blue bin.`
-- Action: `[dx, dy, dz, dRx, dRy, dRz, gripper]`.
-- Arm control: relative 6-DoF damped-least-squares differential IK.
-- Gripper control: one binary action.
-- Physics: 120 Hz with control decimation 4.
-- Control, rendering, observations, and cameras: synchronized at 30 Hz.
-- Cameras: two external RGB views and one wrist RGB view, all 640x480.
-- Success: the instructed target's eight local bounding-box corners are inside the blue-bin interior, the target is settled, the gripper is open and separated, and all conditions persist for ten control steps.
-- Termination: success, unrecoverable target loss, and timeout are separate terms.
+- 场景：Franka Panda、Isaac Lab 自带 Seattle Lab 桌子、白色源箱、蓝色目标箱与四件指定工具。
+- 指令：`Pick the <tool_name> from the white bin and place it in the blue bin.`
+- 动作：`[dx, dy, dz, dRx, dRy, dRz, gripper]`。
+- 机械臂控制：相对 6 自由度阻尼最小二乘差分逆运动学（differential IK）。
+- 夹爪控制：一个二值动作。
+- 物理：120 Hz，控制降采样（decimation）为 4。
+- 控制、渲染、观测与相机：30 Hz 同步。
+- 相机：两路外部 RGB 视角与一路腕部 RGB 视角，均为 640x480。
+- 成功条件：被指令目标的八个局部包围盒角点全部位于蓝色目标箱内部、目标已稳定、夹爪张开并分离，且上述条件连续保持十个控制步。
+- 终止条件：成功、不可恢复的目标丢失与超时是相互独立的终止项。
 
-Detailed frames, thresholds, camera calibration, tradeoffs, validation, and AI disclosure are documented in `REPORT.md`.
+详细的坐标系、阈值、相机标定、设计权衡、验证过程与 AI 使用披露见 `REPORT.md`。
 
-## Zero-Action Validation
+## 零智能体验证
 
-The required zero-agent entry point is:
+要求的零智能体（zero-agent）入口：
 
 ```bash
 python scripts/zero_agent.py \
@@ -62,9 +62,9 @@ python scripts/zero_agent.py \
   --headless --enable_cameras --steps 300
 ```
 
-## Keyboard Teleoperation
+## 键盘遥操作
 
-Set `ISAACLAB_ROOT` to the compatible Isaac Lab checkout:
+将 `ISAACLAB_ROOT` 指向兼容的 Isaac Lab 检出：
 
 ```bash
 export ISAACLAB_ROOT=/absolute/path/to/IsaacLab
@@ -73,15 +73,15 @@ python scripts/teleop.py \
   --sensitivity 1.0
 ```
 
-The wrapper preserves the active Python interpreter, imports `bin_pickplace_tasks` before launching the stock Isaac Lab tool, and automatically enables cameras.
+该封装保留当前 Python 解释器，在启动 Isaac Lab 原生工具之前导入 `bin_pickplace_tasks`，并自动启用相机。
 
-At sensitivity `1.0`, the nominal translation command is approximately `0.012 m` per 30 Hz control step (`0.36 m/s`). A value near `2.0` is useful for free-space travel; `0.4-0.8` is recommended for final alignment and contact. The accepted range is `(0, 5]`.
+灵敏度为 `1.0` 时，每个 30 Hz 控制步的名义平移指令约为 `0.012 m`（`0.36 m/s`）。接近 `2.0` 的值适合自由空间移动；`0.4-0.8` 推荐用于最终对准与接触阶段。允许范围为 `(0, 5]`。
 
-Press `R` to reset. The deterministic environment prints the canonical instruction for the active target.
+按 `R` 重置。确定性环境会打印当前目标的标准指令。
 
-## Human Demonstration Recording
+## 人工演示录制
 
-The final dataset is already included. To reproduce it, first preserve or move the existing file, then run:
+最终数据集已包含在仓库中。如需重新录制，请先保存或移走现有文件，然后运行：
 
 ```bash
 export ISAACLAB_ROOT=/absolute/path/to/IsaacLab
@@ -92,17 +92,17 @@ python scripts/record_demos.py \
   --num_demos 4 --num_success_steps 10
 ```
 
-Successful episodes are assigned in canonical order:
+成功的 episode 按标准顺序分配目标：
 
 ```text
 screwdriver -> wrench -> hammer -> pallet knife
 ```
 
-The recording profile stores initial state, per-step scene states, raw and processed actions, and low-dimensional policy observations. It does not accumulate the three 480x640 RGB tensors in the episode buffer, which prevents long demonstrations from exhausting GPU memory. RGB is re-rendered from the recorded actions during final video export, and this deviation is recorded in the HDF5 metadata.
+录制 profile 保存初始状态、逐步场景状态、原始与处理后动作，以及低维策略观测。它不会在 episode 缓冲中累积三路 480x640 RGB 张量，从而避免长演示耗尽 GPU 显存。RGB 由录制的动作在最终视频导出时重新渲染，这一偏差已记录在 HDF5 元数据中。
 
-## Replay
+## 回放
 
-Optional stock state/action replay:
+可选的原生状态/动作回放：
 
 ```bash
 export ISAACLAB_ROOT=/absolute/path/to/IsaacLab
@@ -112,13 +112,13 @@ python scripts/replay_demos.py \
   --validate_states
 ```
 
-The compatibility wrapper removes only the synthetic leading singleton dimension introduced by the stock `EpisodeData.get_state()` path and restores target identity from each episode's HDF5 metadata after reset. The original elementwise `0.01` comparison tolerance is unchanged.
+兼容性封装仅移除原生 `EpisodeData.get_state()` 路径引入的合成前导单例维度，并在重置后根据每个 episode 的 HDF5 元数据恢复目标身份。原有的逐元素 `0.01` 比较容差保持不变。
 
-Do not use stock `--validate_success_rate` for this task. The stock tool calls the stateful persistent success term only once at episode end, which cannot validate a ten-frame condition. Target-aware per-frame success validation is performed by the exporter.
+不要对本任务使用原生的 `--validate_success_rate`。原生工具只在 episode 结束时调用一次有状态的持续成功项，无法验证一个十帧条件。逐帧的目标感知成功验证由视频导出器完成。
 
-## Three-View Video Export
+## 三视角视频导出
 
-To regenerate the existing videos:
+重新生成现有视频：
 
 ```bash
 python scripts/export_demo_videos.py \
@@ -128,9 +128,9 @@ python scripts/export_demo_videos.py \
   --headless --enable_cameras --overwrite
 ```
 
-The exporter restores each recorded initial state, replays only the human actions, renders the three synchronized views, adds camera labels and the language instruction, evaluates success every step, and refuses to commit a final MP4 unless the target-aware metric fires.
+导出器恢复每条录制的初始状态、只重放人工动作、渲染三路同步视角、叠加相机标签与语言指令、每步评估成功状态，并且只有在目标感知指标触发后才提交最终 MP4。
 
-Final required files:
+最终交付文件：
 
 ```text
 datasets/videos/demo_0.mp4
@@ -139,11 +139,11 @@ datasets/videos/demo_2.mp4
 datasets/videos/demo_3.mp4
 ```
 
-`demo_1` contains approximately 24 seconds of initial idle time and completes 2.63 seconds before the 120-second timeout. It is valid but less concise than the other demonstrations.
+`demo_1` 开头包含约 24 秒的初始空闲时间，并在 120 秒超时前 2.63 秒完成。它是有效的，但不如其他演示精炼。
 
-## Validation
+## 验证
 
-CPU tests:
+CPU 测试：
 
 ```bash
 python -m unittest -v \
@@ -152,7 +152,7 @@ python -m unittest -v \
   tests.test_replay_profile
 ```
 
-CUDA smoke test:
+CUDA 冒烟测试：
 
 ```bash
 python scripts/smoke_test.py \
@@ -161,7 +161,7 @@ python scripts/smoke_test.py \
   --capture-dir datasets/validation/hybrid_collision_final
 ```
 
-Live task-metric probe:
+实时任务指标探针：
 
 ```bash
 python scripts/probe_task_metrics.py \
@@ -169,7 +169,7 @@ python scripts/probe_task_metrics.py \
   --headless --enable_cameras
 ```
 
-Mass and arm-holding probes:
+质量与持载探针：
 
 ```bash
 python scripts/inspect_tool_masses.py --headless --enable_cameras
@@ -179,8 +179,8 @@ python scripts/probe_arm_load_holding.py \
   --max-drop 0.006 --max-angle 0.02
 ```
 
-## Portable Assets and Packaging
+## 可移植资产与打包
 
-Runtime assets are stored under `source/bin_pickplace_tasks/bin_pickplace_tasks/assets` and resolved relative to the installed package. No runtime code or packaged asset depends on a development-machine home directory or the original download location.
+运行时资产存放在 `source/bin_pickplace_tasks/bin_pickplace_tasks/assets` 下，并相对已安装的包路径解析。没有任何运行时代码或打包资产依赖开发机的用户主目录或原始下载位置。
 
-The clean submission excludes raw downloads, stale build output, egg-info, caches, layout-editor candidate files, and historical validation snapshots. It retains the installable source, portable runtime assets, required scripts, tests, English documentation, HDF5 bonus dataset, four required MP4 videos, and the latest validation images.
+干净的提交副本排除了原始下载文件、过期构建产物、egg-info、缓存、布局编辑器候选文件与历史验证截图，保留了可安装源码、可移植运行时资产、所需脚本、测试、中文文档、HDF5 加分数据集、四个必需的 MP4 视频与最新验证图片。

@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "bin-pickplace-tasks"
 version = "0.1.0"
-description = "Manager-based Isaac Lab bin pick-and-place task"
+description = "基于 Manager 的 Isaac Lab 箱体抓取放置任务"
 requires-python = ">=3.11"
 dependencies = ["gymnasium"]
 

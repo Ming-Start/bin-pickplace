@@ -1,7 +1,7 @@
 [package]
 version = "0.1.0"
-title = "Bin Pick Place Tasks"
-description = "Installable bin pick-and-place task package"
+title = "箱体抓取放置任务"
+description = "可安装的箱体抓取放置任务包"
 category = "Isaac Lab"
 
 [dependencies]
