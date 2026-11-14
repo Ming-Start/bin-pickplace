@@ -1,0 +1,92 @@
+{
+  "parts": [],
+  "object_description": "A screwdriver with a black metal shaft and a yellow and grey plastic handle featuring textured rubber grips.",
+  "reasoning": "The screwdriver is a composite object primarily made of a steel shaft and a dense plastic/rubber handle. The mass (0.12 kg) and composite density (1600 kg/m^3) are estimated for a standard 20cm hand tool. Friction coefficients (static 0.6, dynamic 0.5) are averaged to account for the high-grip rubber handle which often acts as the primary contact surface, while restitution is kept low (0.3) due to the dampening properties of the plastic. For Isaac Sim, enabling Continuous Collision Detection (CCD) is critical due to the thin metal shaft, which is highly susceptible to tunneling through other collision meshes at high velocities. Additionally, a 'convex_decomposition' collider is absolutely necessary; a standard convex hull would incorrectly bridge the thick handle to the tip of the shaft, creating a phantom volume that would prevent the tool from being used in fine manipulation or insertion tasks.",
+  "mass": 0.12,
+  "density": 1600,
+  "static_friction": 0.6,
+  "dynamic_friction": 0.5,
+  "restitution": 0.3,
+  "rigid_bodies": {
+    "velocity": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "gravitational_acceleration": [
+      0,
+      0,
+      -9.81
+    ],
+    "ccd": true,
+    "rest_offset": 0,
+    "contact_offset": 0.002
+  },
+  "materials": {
+    "friction": 0.55,
+    "restitution": 0.3,
+    "compliant_contact_damping": 100,
+    "density": 1600
+  },
+  "collisions": {
+    "collider_type": "convex_decomposition",
+    "rest_offset": 0,
+    "contact_offset": 0.002,
+    "explosion_view_distance": 0,
+    "collision_mesh_debug_visualization": false
+  },
+  "simulation_scene": {
+    "simulation_steps_per_second": 60,
+    "enable_ccd": true,
+    "gravitational_acceleration": [
+      0,
+      0,
+      -9.81
+    ]
+  },
+  "_metadata": {
+    "simulator": "isaac_sim_v4.5",
+    "script_used": "simulators/physics_engines/isaac_engine.py",
+    "adapter_version": "1.0.0",
+    "physics_api": "UsdPhysics + PhysxSchema",
+    "coordinate_system": "right_handed_y_up",
+    "units": {
+      "length": "meters",
+      "mass": "kilograms",
+      "time": "seconds"
+    },
+    "object_type": "rigid_bodies"
+  },
+  "_file_info": {
+    "original_filename": "Screwdriver.png",
+    "file_path": "textures/Screwdriver.png",
+    "file_size_bytes": 56023,
+    "file_type": "image",
+    "processed_at": "2026-04-09 06:25:26"
+  },
+  "mesh_dimensions": {
+    "length_x_meters": 0.1993342489004135,
+    "width_y_meters": 0.031414832919836044,
+    "height_z_meters": 0.031375281512737274,
+    "primary_dimension_description": "Mesh extends 0.199m along length (X)",
+    "bounding_box_min": [
+      -0.14166416227817535,
+      0,
+      -0.015703236684203148
+    ],
+    "bounding_box_max": [
+      0.05767008662223816,
+      0.031414832919836044,
+      0.015672044828534126
+    ],
+    "centroid": [
+      -0.007580447121666751,
+      0.015729483050678155,
+      6.548282971626002e-06
+    ],
+    "volume_cubic_meters": 4.9325830399995524e-05
+  }
+}

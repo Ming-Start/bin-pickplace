@@ -1,0 +1,166 @@
+{
+  "parts": [
+    {
+      "canonical_name": "sm_paint_supplies_palletknife_a05_handle_01",
+      "part_name": "sm_paint_supplies_palletknife_a05_handle_01",
+      "source_part_name": "sm_paint_supplies_palletknife_a05_handle_01",
+      "source_object_name": "sm_paint_supplies_palletknife_a05_handle_01",
+      "part_index": 0,
+      "part_id": "part_01",
+      "material_name": "wood",
+      "material": "wood",
+      "mass": 0.02,
+      "density": 600.0,
+      "inertia": [
+        5.176523576033211e-07,
+        1.0455303122480203e-05,
+        1.0656355405404838e-05
+      ],
+      "inertia_axes": [
+        0.021105866508073997,
+        -0.7067911060529488,
+        0.7067999881408521,
+        0.020848298911036286
+      ],
+      "center_of_mass": [
+        4.147431451627446e-05,
+        -0.042056506307332944,
+        0.0075703081488437815
+      ],
+      "part_origin_world": [
+        4.147431451627446e-05,
+        -0.042056506307332944,
+        0.0075703081488437815
+      ],
+      "volume": 1.1874418576145653e-05,
+      "bounds": {
+        "min": [
+          -0.009202,
+          9.6e-05,
+          -0.001193
+        ],
+        "max": [
+          0.009285,
+          0.015193,
+          0.087425
+        ],
+        "center": [
+          4.1e-05,
+          0.007645,
+          0.043116
+        ]
+      },
+      "description": "Wooden grip of the palette knife.",
+      "reasoning": "Visual analysis indicates a solid wooden handle. Set as the structural root of the tool. Volume implies a mass of roughly 20 grams.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.4,
+      "restitution": 0.2,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "target_metallic": 0.0,
+      "target_roughness": 0.6,
+      "glass_ior": null,
+      "glass_frosting": null,
+      "glass_thin_walled": null,
+      "glass_color": null,
+      "color_name": "Red",
+      "confidence": "high"
+    },
+    {
+      "canonical_name": "sm_paint_supplies_palletknife_a05_tip_01",
+      "part_name": "sm_paint_supplies_palletknife_a05_tip_01",
+      "source_part_name": "sm_paint_supplies_palletknife_a05_tip_01",
+      "source_object_name": "sm_paint_supplies_palletknife_a05_tip_01",
+      "part_index": 1,
+      "part_id": "part_00",
+      "material_name": "steel",
+      "material": "steel",
+      "mass": 0.01,
+      "density": 7850.0,
+      "inertia": [
+        3.224000072139849e-07,
+        4.261352888709542e-06,
+        4.454541059579977e-06
+      ],
+      "inertia_axes": [
+        0.029788662661573873,
+        0.7062928486096924,
+        0.70668593172551,
+        -0.029292345090296903
+      ],
+      "center_of_mass": [
+        1.6420708209391673e-05,
+        0.04057172821326044,
+        0.005575812174464684
+      ],
+      "part_origin_world": [
+        1.6420708209391673e-05,
+        0.04057172821326044,
+        0.005575812174464684
+      ],
+      "volume": 1.0280657445059768e-05,
+      "bounds": {
+        "min": [
+          -0.011789,
+          1.6e-05,
+          -0.087914
+        ],
+        "max": [
+          0.011789,
+          0.014804,
+          -0.000763
+        ],
+        "center": [
+          0.0,
+          0.00741,
+          -0.044339
+        ]
+      },
+      "description": "Flexible metal tip used for mixing and applying paint.",
+      "reasoning": "Thin steel blade permanently attached to the handle. Extremely low mass and high density typical of a metallic palette knife tip.",
+      "static_friction": 0.3,
+      "dynamic_friction": 0.2,
+      "restitution": 0.3,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": false,
+      "target_metallic": 1.0,
+      "target_roughness": 0.4,
+      "glass_ior": null,
+      "glass_frosting": null,
+      "glass_thin_walled": null,
+      "glass_color": null,
+      "color_name": "Blue",
+      "confidence": "high"
+    }
+  ],
+  "joint_relations": [
+    {
+      "child": "sm_paint_supplies_palletknife_a05_tip_01",
+      "parent": "sm_paint_supplies_palletknife_a05_handle_01",
+      "joint_type": "fixed",
+      "name": "joint_sm_paint_supplies_palletknife_a05_handle_01__sm_paint_supplies_palletknife_a05_tip_01",
+      "damping": 0.0,
+      "effort": 0.0,
+      "friction": 0.0,
+      "stiffness": 0.0,
+      "velocity": 0.0,
+      "origin": [],
+      "joint_rotation_local": [],
+      "axis": [],
+      "motion_limits": null,
+      "revolute_mode": null
+    }
+  ],
+  "base_link": "sm_paint_supplies_palletknife_a05_handle_01",
+  "object_description": "A small artist's palette knife. Simulated as a single rigid assembly with a structural handle and attached metal blade.",
+  "total_mass": 0.03,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "Simple, stable rigid-body setup representing a static hand tool. Mass and PBR values reflect a realistic lightweight palette knife.",
+  "num_parts": 2,
+  "object_type": "rigid_bodies"
+}

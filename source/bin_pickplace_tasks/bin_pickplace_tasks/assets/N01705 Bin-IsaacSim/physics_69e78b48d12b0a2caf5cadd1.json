@@ -1,0 +1,81 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "product image",
+      "source_part_name": "product image",
+      "source_object_name": "product image",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "plastic",
+      "material": "plastic",
+      "mass": 0.4,
+      "density": 950.0,
+      "inertia": [
+        0.0018792107896590602,
+        0.00436117109694717,
+        0.004834565861536521
+      ],
+      "inertia_axes": [
+        0.9997616851832286,
+        -0.0001322525451710328,
+        0.021829097308131536,
+        -0.00021414847006972378
+      ],
+      "center_of_mass": [
+        -0.008479791608429479,
+        -5.785695594354526e-05,
+        0.04356758905256687
+      ],
+      "part_origin_world": [
+        -0.008479791608429479,
+        -5.785695594354526e-05,
+        0.04356758905256687
+      ],
+      "volume": 8.422542349802848e-05,
+      "bounds": {
+        "min": [
+          -0.14880000054836273,
+          -0.07055400311946869,
+          0.0
+        ],
+        "max": [
+          0.14880000054836273,
+          0.07055400311946869,
+          0.129489004611969
+        ],
+        "center": [
+          -0.007299561620225873,
+          -2.2701835441150646e-07,
+          0.04879608370744338
+        ]
+      },
+      "description": "A dark gray rectangular plastic storage bin featuring an open top, a lowered front lip for access, and vertical reinforcing ribs along its sides.",
+      "reasoning": "Based on its appearance, the model is a standard industrial or organizational storage bin, typically constructed from rigid plastics such as High-Density Polyethylene (HDPE) or Polypropylene (PP). The material density is estimated at 950 kg/m\u00b3, which is standard for such plastics. Given typical dimensions for bins of this proportion, a mass of 0.4 kg is appropriate. The friction coefficients (0.4 static, 0.3 dynamic) and restitution (0.4) reflect hard plastic surface properties. Crucially, for Isaac Sim physics, the collision geometry must be set to 'convex_decomposition' rather than 'convex_hull'; a convex hull would enclose the top opening, preventing the bin from holding objects. Continuous Collision Detection (CCD) is enabled to prevent small or fast-moving parts dropped into the bin from tunneling through its relatively thin walls.",
+      "static_friction": 0.4,
+      "dynamic_friction": 0.3,
+      "restitution": 0.4,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "target_metallic": null,
+      "target_roughness": null,
+      "glass_ior": null,
+      "glass_frosting": null,
+      "glass_thin_walled": null,
+      "glass_color": null,
+      "color_name": "",
+      "confidence": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "product image",
+  "object_description": "A dark gray rectangular plastic storage bin featuring an open top, a lowered front lip for access, and vertical reinforcing ribs along its sides.",
+  "total_mass": 0.4,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

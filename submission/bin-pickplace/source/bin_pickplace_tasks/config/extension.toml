@@ -1,0 +1,13 @@
+[package]
+version = "0.1.0"
+title = "Bin Pick Place Tasks"
+description = "Installable bin pick-and-place task package"
+category = "Isaac Lab"
+
+[dependencies]
+"isaaclab" = {}
+"isaaclab_assets" = {}
+
+[[python.module]]
+name = "bin_pickplace_tasks"
+

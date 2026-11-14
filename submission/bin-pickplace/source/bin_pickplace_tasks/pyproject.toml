@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bin-pickplace-tasks"
+version = "0.1.0"
+description = "Manager-based Isaac Lab bin pick-and-place task"
+requires-python = ">=3.11"
+dependencies = ["gymnasium"]
+
+[tool.setuptools.package-data]
+bin_pickplace_tasks = ["assets/**/*", "config/*.toml"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+exclude = ["build", "build.*"]

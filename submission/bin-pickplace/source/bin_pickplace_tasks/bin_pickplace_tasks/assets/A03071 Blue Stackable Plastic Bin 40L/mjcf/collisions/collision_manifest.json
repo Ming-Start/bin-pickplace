@@ -1,0 +1,246 @@
+{
+  "parts": [
+    {
+      "name": "part_00",
+      "part_index": 0,
+      "collision_meshes": [
+        "A03071 Blue Stackable Plastic Bin 40L_collision_0.obj",
+        "A03071 Blue Stackable Plastic Bin 40L_collision_1.obj",
+        "A03071 Blue Stackable Plastic Bin 40L_collision_10.obj",
+        "A03071 Blue Stackable Plastic Bin 40L_collision_11.obj",
+        "A03071 Blue Stackable Plastic Bin 40L_collision_12.obj",
+        "A03071 Blue Stackable Plastic Bin 40L_collision_13.obj",
+        "A03071 Blue Stackable Plastic Bin 40L_collision_14.obj",
+        "A03071 Blue Stackable Plastic Bin 40L_collision_15.obj",
+        "A03071 Blue Stackable Plastic Bin 40L_collision_16.obj",
+        "A03071 Blue Stackable Plastic Bin 40L_collision_17.obj",
+        "A03071 Blue Stackable Plastic Bin 40L_collision_18.obj",
+        "A03071 Blue Stackable Plastic Bin 40L_collision_19.obj",
+        "A03071 Blue Stackable Plastic Bin 40L_collision_2.obj",
+        "A03071 Blue Stackable Plastic Bin 40L_collision_20.obj",
+        "A03071 Blue Stackable Plastic Bin 40L_collision_21.obj",
+        "A03071 Blue Stackable Plastic Bin 40L_collision_22.obj",
+        "A03071 Blue Stackable Plastic Bin 40L_collision_23.obj",
+        "A03071 Blue Stackable Plastic Bin 40L_collision_24.obj",
+        "A03071 Blue Stackable Plastic Bin 40L_collision_25.obj",
+        "A03071 Blue Stackable Plastic Bin 40L_collision_26.obj",
+        "A03071 Blue Stackable Plastic Bin 40L_collision_27.obj",
+        "A03071 Blue Stackable Plastic Bin 40L_collision_28.obj",
+        "A03071 Blue Stackable Plastic Bin 40L_collision_29.obj",
+        "A03071 Blue Stackable Plastic Bin 40L_collision_3.obj",
+        "A03071 Blue Stackable Plastic Bin 40L_collision_30.obj",
+        "A03071 Blue Stackable Plastic Bin 40L_collision_31.obj",
+        "A03071 Blue Stackable Plastic Bin 40L_collision_32.obj",
+        "A03071 Blue Stackable Plastic Bin 40L_collision_33.obj",
+        "A03071 Blue Stackable Plastic Bin 40L_collision_34.obj",
+        "A03071 Blue Stackable Plastic Bin 40L_collision_35.obj",
+        "A03071 Blue Stackable Plastic Bin 40L_collision_36.obj",
+        "A03071 Blue Stackable Plastic Bin 40L_collision_37.obj",
+        "A03071 Blue Stackable Plastic Bin 40L_collision_38.obj",
+        "A03071 Blue Stackable Plastic Bin 40L_collision_39.obj",
+        "A03071 Blue Stackable Plastic Bin 40L_collision_4.obj",
+        "A03071 Blue Stackable Plastic Bin 40L_collision_40.obj",
+        "A03071 Blue Stackable Plastic Bin 40L_collision_41.obj",
+        "A03071 Blue Stackable Plastic Bin 40L_collision_42.obj",
+        "A03071 Blue Stackable Plastic Bin 40L_collision_5.obj",
+        "A03071 Blue Stackable Plastic Bin 40L_collision_6.obj",
+        "A03071 Blue Stackable Plastic Bin 40L_collision_7.obj",
+        "A03071 Blue Stackable Plastic Bin 40L_collision_8.obj",
+        "A03071 Blue Stackable Plastic Bin 40L_collision_9.obj"
+      ],
+      "num_hulls": 43,
+      "contact_offset": 0.002774757383189612,
+      "rest_offset": 0.0,
+      "collider_decision": {
+        "type": "mesh",
+        "reason": "Preset-driven authored collision generation with health-based adaptive preprocessing"
+      },
+      "collision_approximation": {
+        "type": "convexDecomposition",
+        "reason": "Preset-driven authored collision generation with health-based adaptive preprocessing"
+      },
+      "topology_analysis": null,
+      "mesh_health": {
+        "vertex_count": 103658,
+        "face_count": 208728,
+        "watertight": true,
+        "vertex_face_ratio": 0.4966176076041547,
+        "thinness_ratio": 0.5549789062396623,
+        "extents": [
+          0.3561094341597968,
+          0.2774757383189612,
+          0.4999752877078467
+        ],
+        "min_extent": 0.2774757383189612,
+        "max_extent": 0.4999752877078467
+      },
+      "hole_preserved": null,
+      "coacd_params": {
+        "threshold": 0.05399999999999999,
+        "merge": true,
+        "max_convex_hulls": 43,
+        "file_ext": "obj",
+        "preprocess_resolution": 100,
+        "grid_resolution": 10000,
+        "mcts_nodes": 20,
+        "mcts_iterations": 100,
+        "max_faces_per_hull": 64,
+        "file_prefix": "A03071 Blue Stackable Plastic Bin 40L_collision_"
+      },
+      "source_builder": "voxel",
+      "source_builder_metrics": {
+        "before_vertices": 277852,
+        "before_faces": 500000,
+        "after_vertices": 103658,
+        "after_faces": 208728,
+        "bbox_fit_applied": true,
+        "bbox_fit_scale": 0.004865070727857463
+      },
+      "runtime_seconds": 82.2586166318506,
+      "metrics": {},
+      "part_id": null,
+      "canonical_name": null,
+      "source_name": "shape_69db5a7a28725f31140cd904_node_0",
+      "collision_face_stats": {
+        "collision_hull_count": 43,
+        "collision_face_count": 2528,
+        "collision_vertex_count": 1350,
+        "max_hull_faces": 60,
+        "median_hull_faces": 60.0,
+        "mean_hull_faces": 58.7906976744186,
+        "per_hull_face_counts": [
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          54,
+          60,
+          24,
+          60,
+          60,
+          60,
+          56,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          54,
+          60,
+          60
+        ]
+      },
+      "asset_budget": {},
+      "bbox_fit": {
+        "applied": false,
+        "scale": 1.0,
+        "axis_scales": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "shift": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "source_bounds": [
+          [
+            -0.17860795557498932,
+            0.0,
+            -0.24993133544921875
+          ],
+          [
+            0.1775028258562088,
+            0.27747708559036255,
+            0.2500452995300293
+          ]
+        ],
+        "collision_bounds_before": [
+          [
+            -0.17860728,
+            6.7e-07,
+            -0.24993066
+          ],
+          [
+            0.17750215,
+            0.2774631,
+            0.25003691
+          ]
+        ],
+        "collision_bounds_after": null,
+        "overflow_before": [
+          0.0035597563831138435,
+          0.002760115265541086,
+          0.0049907013705444425
+        ],
+        "overflow_after": null
+      }
+    }
+  ],
+  "multipart": false,
+  "merged_glb": "collision_hulls.glb",
+  "policy": {
+    "preserve_holes_default": null,
+    "collision_mode": "authored_convex_decomposition"
+  },
+  "summary": {
+    "total_parts": 1,
+    "total_hulls": 43,
+    "total_runtime_seconds": 82.2586166318506,
+    "max_part_runtime_seconds": 82.2586166318506,
+    "direct_collision_parts": 0,
+    "collision_face_count": 2528,
+    "collision_vertex_count": 1350,
+    "max_hull_faces": 60,
+    "median_hull_faces": 60.0,
+    "collision_approximation_counts": {
+      "convexHull": 0,
+      "convexDecomposition": 1,
+      "sdf": 0
+    },
+    "source_builder_counts": {
+      "voxel": 1
+    },
+    "shared_voxel_clusters": 0,
+    "shared_voxel_parts": 0,
+    "shared_voxel_clipped_voxels": 0,
+    "asset_budget": {
+      "enabled": false,
+      "authored_parts": 1,
+      "asset_max_hulls": 0,
+      "asset_max_collision_faces": 0
+    },
+    "over_asset_hull_budget": false,
+    "over_asset_face_budget": false
+  },
+  "toolchain": {
+    "method": "coacd",
+    "direct_approximation": null
+  },
+  "combined_metrics": null
+}

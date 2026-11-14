@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<robot name="MuJoCo_asset_69db5a7a28725f31140cd904">
+  <link name="part_00">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="./meshes/part_00.obj"/>
+      </geometry>
+      <material name="Material_012">
+        <texture filename="../../parts/texture_base_color.png"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="./meshes/part_00.obj"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

@@ -1,0 +1,140 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "wooden handle",
+      "source_part_name": "part_00",
+      "source_object_name": "part_00",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "hardwood",
+      "material": "hardwood",
+      "mass": 0.2,
+      "density": 700.0,
+      "inertia": [
+        2.3643688029131878e-05,
+        0.0010494201392666825,
+        0.0010505844670129338
+      ],
+      "center_of_mass": [
+        0.0740626522643631,
+        -0.0022090066974681175,
+        0.015983685388810648
+      ],
+      "volume": 0.00018177976686614377,
+      "bounds": {
+        "min": [
+          -0.05869,
+          0.000506,
+          -0.014359
+        ],
+        "max": [
+          0.193993,
+          0.031297,
+          0.019061
+        ],
+        "center": [
+          0.067652,
+          0.015901,
+          0.002351
+        ]
+      },
+      "description": "Hardwood shaft providing grip and leverage for swinging the hammer.",
+      "reasoning": "Visuals show a wooden handle with a contoured shape for gripping. It acts as the main holding structure. Estimated mass around 0.2 kg.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.4,
+      "restitution": 0.2,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "Red",
+      "confidence": "high",
+      "appearance_properties": {
+        "metallic": 0,
+        "roughness": 0.6
+      }
+    },
+    {
+      "canonical_name": "part_01",
+      "part_name": "hammer head",
+      "source_part_name": "part_01",
+      "source_object_name": "part_01",
+      "part_index": 1,
+      "part_id": "part_01",
+      "material_name": "steel",
+      "material": "steel",
+      "mass": 0.5,
+      "density": 7850.0,
+      "inertia": [
+        0.00011374535395488026,
+        0.0005784894775447695,
+        0.000634257907782257
+      ],
+      "center_of_mass": [
+        -0.09027229016152143,
+        -0.0037577755708653677,
+        0.01599636681766262
+      ],
+      "volume": 0.00010650579912262588,
+      "bounds": {
+        "min": [
+          -0.114628,
+          6.5e-05,
+          -0.075499
+        ],
+        "max": [
+          -0.057932,
+          0.032744,
+          0.069106
+        ],
+        "center": [
+          -0.08628,
+          0.016405,
+          -0.003196
+        ]
+      },
+      "description": "Heavy steel head with a striking face and a claw for extracting nails.",
+      "reasoning": "Metallic head matching a standard claw hammer design. It is permanently fixed to the handle. Mass is estimated at 0.5 kg (roughly 16-18 oz).",
+      "static_friction": 0.4,
+      "dynamic_friction": 0.3,
+      "restitution": 0.4,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": false,
+      "color_name": "Blue",
+      "confidence": "high",
+      "appearance_properties": {
+        "metallic": 1,
+        "roughness": 0.3
+      }
+    }
+  ],
+  "joint_relations": [
+    {
+      "child": "hammer head",
+      "parent": "wooden handle",
+      "joint_type": "fixed",
+      "name": "joint_wooden_handle__hammer_head",
+      "damping": 0.0,
+      "effort": 0.0,
+      "friction": 0.0,
+      "stiffness": 0.0,
+      "velocity": 0.0,
+      "origin": [],
+      "joint_rotation_local": [],
+      "axis": [],
+      "motion_limits": null,
+      "revolute_mode": null
+    }
+  ],
+  "base_link": "wooden handle",
+  "object_description": "A standard claw hammer with a steel head and hardwood handle. Simulated as a single rigid body assembly for manipulation and striking tasks.",
+  "total_mass": 0.7,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "Simple two-part tool with no moving mechanisms. Highly stable for rigid body simulation as a fixed assembly.",
+  "num_parts": 2,
+  "object_type": "rigid_bodies"
+}

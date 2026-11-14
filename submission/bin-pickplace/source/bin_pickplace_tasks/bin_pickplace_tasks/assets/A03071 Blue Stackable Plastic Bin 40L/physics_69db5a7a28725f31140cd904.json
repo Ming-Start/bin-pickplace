@@ -1,0 +1,64 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "A03071 Blue Stackable Plastic Bin 40L",
+      "source_part_name": "A03071 Blue Stackable Plastic Bin 40L",
+      "source_object_name": "A03071 Blue Stackable Plastic Bin 40L",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "plastic",
+      "material": "plastic",
+      "mass": 2.0,
+      "density": 950.0,
+      "inertia": [
+        0.051050530467501916,
+        0.07566742082696055,
+        0.08807280957633412
+      ],
+      "center_of_mass": [
+        -0.0002453477684827857,
+        0.00013112056586515555,
+        0.12659966777739004
+      ],
+      "volume": 0.002026763215655555,
+      "bounds": {
+        "min": [
+          -0.24985699355602264,
+          -0.1793760061264038,
+          -0.00020399999630171806
+        ],
+        "max": [
+          0.25008800625801086,
+          0.18045400083065033,
+          0.2736879885196686
+        ],
+        "center": [
+          0.0001484785049785858,
+          0.0005075979305718744,
+          0.12438403238956465
+        ]
+      },
+      "description": "A rectangular, dark blue plastic storage bin with ribbed siding and built-in handle grips.",
+      "reasoning": "The object is a plastic storage tote/bin. Based on its visual appearance, it is likely made of high-density polyethylene (HDPE) or polypropylene (PP). Its dimensions appear to be roughly standard for such bins (e.g., 60cm x 40cm x 30cm). The material dictates its friction and restitution values. Given it's a hollow container designed to hold objects, convex decomposition is essential for accurate collisions inside the bin. The mass is estimated around 1.5 - 2.5 kg for a heavy-duty plastic bin of this size.",
+      "static_friction": 0.45,
+      "dynamic_friction": 0.35,
+      "restitution": 0.4,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "confidence": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "A03071 Blue Stackable Plastic Bin 40L",
+  "object_description": "A rectangular, dark blue plastic storage bin with ribbed siding and built-in handle grips.",
+  "total_mass": 2.0,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

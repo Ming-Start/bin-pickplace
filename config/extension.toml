@@ -1,0 +1,13 @@
+[package]
+version = "0.1.0"
+title = "Bin Pick Place"
+description = "Language-conditioned Franka bin pick-and-place environment"
+category = "Isaac Lab"
+
+[dependencies]
+"isaaclab" = {}
+"isaaclab_assets" = {}
+
+[[python.module]]
+name = "bin_pickplace_tasks"
+

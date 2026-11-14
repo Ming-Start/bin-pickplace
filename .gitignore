@@ -1,0 +1,26 @@
+# Python and packaging output
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Local editor and simulator output
+.pytest_cache/
+.ruff_cache/
+*.log
+
+# Raw downloaded assets are retained locally but are not part of the portable submission.
+google_drive_assets/
+
+# Large presentation decks are kept locally under docs/ but not committed.
+docs/*.pptx
+
+# Layout editor candidate; formal reset poses live in the package configuration/events.
+datasets/manual_layout.json
+
+# Historical validation snapshots; keep only the final hybrid-collision evidence.
+datasets/validation/cameras_final_scaled/
+datasets/validation/ccd_contact_final/
+datasets/validation/grasp_access_layout/
+datasets/validation/manual_layout_final/

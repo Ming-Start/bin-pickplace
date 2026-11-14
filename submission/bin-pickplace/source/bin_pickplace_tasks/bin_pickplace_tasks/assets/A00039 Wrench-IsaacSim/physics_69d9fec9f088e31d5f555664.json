@@ -1,0 +1,64 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "Wrench",
+      "source_part_name": "Wrench",
+      "source_object_name": "Wrench",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "steel",
+      "material": "steel",
+      "mass": 0.15,
+      "density": 7850.0,
+      "inertia": [
+        1.6475682733939042e-05,
+        0.0006556626120372196,
+        0.0006702480036553597
+      ],
+      "center_of_mass": [
+        -0.013364985346639468,
+        0.00010394189766148532,
+        0.006468471545501704
+      ],
+      "volume": 2.600729169248092e-05,
+      "bounds": {
+        "min": [
+          -0.10601609200239182,
+          0.0,
+          -0.023145753890275955
+        ],
+        "max": [
+          0.09394261986017227,
+          0.012855857610702515,
+          0.023178018629550934
+        ],
+        "center": [
+          -0.006318935059690968,
+          0.0064674123325689815,
+          -9.957845898787611e-05
+        ]
+      },
+      "description": "A silver metallic combination wrench featuring an open U-shaped end and a closed 12-point ring end. It has a smooth, polished steel finish along its central handle shaft.",
+      "reasoning": "The object is visually identified as a standard combination wrench, typically forged from chrome-vanadium steel. The mass (estimated at 0.15 kg) and density (7850 kg/m\u00b3) reflect standard steel properties for a medium-sized hand tool. The friction coefficients (static 0.5, dynamic 0.4) are typical for smooth polished steel against other common materials. Restitution is set to 0.5, representing a hard metallic object that absorbs some impact but retains moderate bounciness. Continuous Collision Detection (CCD) is critical for this object because it is thin and might experience high velocities when dropped or manipulated, which could cause tunneling through other colliders in PhysX. For collision geometry, 'convex_decomposition' is absolutely required; using a standard convex hull would span across the open jaws and the ring hole, preventing the tool from being functionally simulated (e.g., gripping a bolt). A very small contact offset ensures precise physical interactions for manipulation.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.4,
+      "restitution": 0.5,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "confidence": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "Wrench",
+  "object_description": "A silver metallic combination wrench featuring an open U-shaped end and a closed 12-point ring end. It has a smooth, polished steel finish along its central handle shaft.",
+  "total_mass": 0.15,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}
